@@ -3,6 +3,12 @@
   "version": "0.0.1",
   "private": true,
   "dependencies": {
-    "@waline/vercel": "latest"
-  }
+    "@waline/vercel": "latest",
+    "@snyk/protect": "latest"
+  },
+  "scripts": {
+    "prepublish": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
+  },
+  "snyk": true
 }
